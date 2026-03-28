@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)file:///C:/Users/USER/Downloads/index_6.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本ケミコン株式会社 | 経営構造診断レポート | LIMITSHIFT 30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./日本ケミコン株式会社 _ 経営構造診断レポート _ LIMITSHIFT 30_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f9f7f2;
+    --navy: #1a2640;
+    --navy-light: #243452;
+    --gold: #a07820;
+    --gold-light: #c49a30;
+    --gold-pale: #f0e8cc;
+    --text-dark: #1a2640;
+    --text-mid: #4a4744;
+    --text-light: #7a7470;
+    --border: rgba(160,120,32,0.2);
+    --border-navy: rgba(26,38,64,0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    background: var(--cream);
+    color: var(--text-dark);
+    font-family: 'Noto Serif JP', serif;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  /* ── PROGRESS BAR ── */
+  #progress-bar {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    width: 0%; z-index: 9999;
+    transition: width 0.1s linear;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 3px; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px;
+    height: 64px;
+    background: transparent;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(26,38,64,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .nav-left {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px; font-weight: 500;
+    color: var(--cream);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+  .nav-divider {
+    width: 1px; height: 20px;
+    background: rgba(249,247,242,0.3);
+  }
+  .nav-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px; font-weight: 400;
+    color: rgba(249,247,242,0.8);
+    letter-spacing: 0.05em;
+  }
+  .nav-cta {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; font-weight: 500;
+    color: var(--gold-light);
+    border: 1px solid var(--gold);
+    padding: 8px 20px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--navy);
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 20% 50%, rgba(160,120,32,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 80% 30%, rgba(26,38,64,0.04) 0%, transparent 50%);
+  }
+  .hero-left {
+    padding: 140px 64px 80px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; z-index: 1;
+    background: var(--cream);
+  }
+  .hero-kicker {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-kicker::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--gold);
+  }
+  .hero-company {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px; font-weight: 300;
+    color: var(--text-mid);
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+  }
+  .hero-h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--navy);
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+  }
+  .hero-h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 14px; font-weight: 300;
+    color: var(--text-mid);
+    line-height: 2;
+    margin-bottom: 40px;
+    max-width: 460px;
+  }
+  .hero-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 300;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    line-height: 2;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-navy);
+  }
+  .hero-right {
+    background: var(--navy);
+    padding: 140px 60px 80px 56px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .hero-right::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(160,120,32,0.12) 0%, transparent 60%);
+  }
+  .hero-toc {
+    list-style: none;
+    margin-bottom: 48px;
+    position: relative; z-index: 1;
+  }
+  .hero-toc li {
+    border-bottom: 1px solid rgba(249,247,242,0.1);
+    padding: 14px 0;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .hero-toc li:first-child { border-top: 1px solid rgba(249,247,242,0.1); }
+  .toc-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px; font-weight: 300;
+    color: rgba(160,120,32,0.4);
+    line-height: 1;
+    min-width: 44px;
+  }
+  .toc-label {
+    font-size: 13px; font-weight: 300;
+    color: rgba(249,247,242,0.8);
+    letter-spacing: 0.05em;
+  }
+  .hero-cta-btn {
+    display: block;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--navy);
+    text-align: center;
+    padding: 18px 32px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px; font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    position: relative; z-index: 1;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+  }
+  .hero-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(160,120,32,0.4);
+  }
+  .hero-cta-sub {
+    font-size: 11px; font-weight: 300;
+    color: rgba(249,247,242,0.5);
+    text-align: center;
+    letter-spacing: 0.05em;
+    position: relative; z-index: 1;
+  }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 100px 0; }
+  .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 80px; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 48px;
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-in-delay-1 { transition-delay: 0.1s; }
+  .fade-in-delay-2 { transition-delay: 0.2s; }
+  .fade-in-delay-3 { transition-delay: 0.3s; }
+  .fade-in-delay-4 { transition-delay: 0.4s; }
+
+  /* ── S01: NUMBERS ── */
+  #s01 { background: var(--cream); }
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+  .metric-card {
+    padding: 40px;
+    background: white;
+    border: 1px solid var(--border-navy);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(26,38,64,0.1);
+  }
+  .metric-card.featured {
+    background: var(--navy);
+  }
+  .metric-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .metric-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+  .metric-card.featured .metric-value { color: var(--cream); }
+  .metric-desc {
+    font-size: 12px; font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+  .metric-card.featured .metric-desc { color: rgba(249,247,242,0.7); }
+
+  /* KYBER card */
+  .metric-card.kyber {
+    background: var(--navy);
+    grid-column: span 1;
+  }
+  .metric-card.kyber .metric-value {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(36px, 3.5vw, 52px);
+    color: var(--gold-light);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .kyber-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px; font-weight: 300;
+    color: rgba(249,247,242,0.08);
+    position: absolute;
+    right: 24px; bottom: -8px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .metric-card.kyber .metric-desc { color: rgba(249,247,242,0.7); }
+
+  .s01-lead {
+    max-width: 640px;
+    font-size: 14px; font-weight: 300;
+    color: var(--text-mid);
+    font-style: italic;
+    line-height: 2;
+    padding: 32px;
+    border-left: 2px solid var(--gold);
+    background: rgba(160,120,32,0.04);
+  }
+
+  /* ── S02: STRUCTURE ── */
+  #s02 { background: var(--navy); }
+  #s02 .section-title { color: var(--cream); }
+  #s02 .section-label { color: var(--gold-light); }
+
+  .s02-lead {
+    background: rgba(249,247,242,0.05);
+    border-left: 2px solid var(--gold);
+    padding: 32px 40px;
+    margin-bottom: 56px;
+    font-style: italic;
+    font-size: 15px; font-weight: 300;
+    color: rgba(249,247,242,0.85);
+    line-height: 2;
+  }
+
+  .layers-grid {
+    display: grid;
+    gap: 2px;
+  }
+  .layer-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    background: rgba(249,247,242,0.04);
+    border: 1px solid rgba(249,247,242,0.08);
+    transition: background 0.3s ease;
+    overflow: hidden;
+  }
+  .layer-card:hover { background: rgba(249,247,242,0.07); }
+  .layer-num {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 32px 24px;
+    border-right: 1px solid rgba(249,247,242,0.08);
+  }
+  .layer-num-big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px; font-weight: 300;
+    color: rgba(160,120,32,0.3);
+    line-height: 1;
+  }
+  .layer-num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px; font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .layer-content {
+    padding: 32px 40px;
+  }
+  .layer-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; font-weight: 500;
+    color: var(--gold-light);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .layer-text {
+    font-size: 13px; font-weight: 300;
+    color: rgba(249,247,242,0.75);
+    line-height: 1.9;
+  }
+
+  /* ── S03: FRAMEWORK ── */
+  #s03 { background: var(--cream); }
+  .s03-lead {
+    max-width: 680px;
+    font-size: 14px; font-weight: 300;
+    color: var(--text-mid);
+    font-style: italic;
+    line-height: 2;
+    margin-bottom: 64px;
+    padding: 32px;
+    border-left: 2px solid var(--gold);
+    background: rgba(160,120,32,0.04);
+  }
+
+  .framework-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+  .fw-card {
+    background: white;
+    border: 1px solid var(--border-navy);
+    padding: 40px 32px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+  .fw-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .fw-card:hover::before, .fw-card.active::before { transform: scaleX(1); }
+  .fw-card:hover, .fw-card.active {
+    background: var(--navy);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(26,38,64,0.15);
+  }
+  .fw-card-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px; font-weight: 300;
+    color: rgba(160,120,32,0.15);
+    line-height: 1;
+    margin-bottom: 16px;
+    transition: color 0.4s ease;
+  }
+  .fw-card:hover .fw-card-letter, .fw-card.active .fw-card-letter {
+    color: rgba(160,120,32,0.3);
+  }
+  .fw-card-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .fw-card-heading {
+    font-size: 15px; font-weight: 600;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    transition: color 0.4s ease;
+  }
+  .fw-card:hover .fw-card-heading, .fw-card.active .fw-card-heading {
+    color: var(--cream);
+  }
+  .fw-card-brief {
+    font-size: 13px; font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.8;
+    transition: color 0.4s ease;
+  }
+  .fw-card:hover .fw-card-brief, .fw-card.active .fw-card-brief {
+    color: rgba(249,247,242,0.65);
+  }
+  .fw-card-detail {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(249,247,242,0.15);
+    font-size: 12px; font-weight: 300;
+    color: rgba(249,247,242,0.7);
+    line-height: 1.9;
+  }
+  .fw-card.active .fw-card-detail { display: block; }
+
+  .fw-arrow {
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; font-weight: 400;
+    color: var(--text-light);
+    letter-spacing: 0.15em;
+    margin: 24px 0;
+    display: flex; align-items: center; gap: 16px; justify-content: center;
+  }
+  .fw-arrow::before, .fw-arrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-navy);
+  }
+
+  .fw-output-box {
+    background: var(--navy);
+    padding: 40px 48px;
+    margin-bottom: 24px;
+  }
+  .fw-output-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .fw-output-text {
+    font-size: 15px; font-weight: 300;
+    color: var(--cream);
+    line-height: 1.8;
+  }
+
+  .fw-questions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+  .fw-q {
+    background: white;
+    border: 1px solid var(--border-navy);
+    padding: 24px 32px;
+    display: flex; align-items: flex-start; gap: 16px;
+  }
+  .fw-q-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    min-width: 24px;
+  }
+  .fw-q-text {
+    font-size: 13px; font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.8;
+  }
+
+  /* ── S04: HYPOTHESIS ── */
+  #s04 { background: var(--cream); padding-top: 0; }
+  .s04-header {
+    background: var(--navy);
+    padding: 80px 80px 80px;
+    max-width: 100%;
+    margin-bottom: 64px;
+  }
+  .s04-header-inner { max-width: 1100px; margin: 0 auto; }
+  .s04-header .section-label { color: var(--gold-light); }
+  .s04-header .section-title { color: var(--cream); margin-bottom: 24px; }
+  .s04-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2vw, 26px);
+    font-weight: 300;
+    color: var(--gold-light);
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  .s04-inner { max-width: 1100px; margin: 0 auto; padding: 0 80px; }
+
+  .step-block {
+    margin-bottom: 64px;
+  }
+  .step-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .step-label::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--border-navy);
+  }
+  .step-title {
+    font-size: 18px; font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .hypothesis-box {
+    background: var(--navy);
+    padding: 40px 48px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hypothesis-box::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--gold), var(--gold-light));
+  }
+  .hypothesis-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 1.8vw, 24px);
+    font-weight: 300;
+    color: var(--cream);
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .hypothesis-reason {
+    font-size: 13px; font-weight: 300;
+    color: rgba(249,247,242,0.7);
+    line-height: 2;
+  }
+
+  .three-elements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+  .elem-card {
+    border: 1px solid var(--border-navy);
+    overflow: hidden;
+  }
+  .elem-header {
+    background: var(--navy);
+    padding: 20px 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .elem-check {
+    width: 20px; height: 20px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: var(--gold);
+    flex-shrink: 0;
+  }
+  .elem-header-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .elem-body {
+    padding: 24px;
+    background: white;
+  }
+  .elem-title {
+    font-size: 13px; font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .elem-content {
+    font-size: 12px; font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.9;
+  }
+  .elem-content strong {
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .sub-domain-box {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    padding: 48px;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sub-domain-box::before {
+    content: 'AEM';
+    position: absolute;
+    right: 40px; bottom: -20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px; font-weight: 300;
+    color: rgba(249,247,242,0.04);
+    letter-spacing: 0.1em;
+  }
+  .sub-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .sub-title {
+    font-size: 20px; font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .sub-content {
+    font-size: 13px; font-weight: 300;
+    color: rgba(249,247,242,0.75);
+    line-height: 2;
+    margin-bottom: 32px;
+  }
+  .sub-questions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .sub-q {
+    background: rgba(249,247,242,0.05);
+    border: 1px solid rgba(249,247,242,0.1);
+    padding: 16px 20px;
+    display: flex; gap: 12px;
+  }
+  .sub-q-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px; font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .sub-q-text {
+    font-size: 12px; font-weight: 300;
+    color: rgba(249,247,242,0.75);
+    line-height: 1.7;
+  }
+
+  .s04-closing {
+    font-size: 14px; font-weight: 300;
+    color: var(--text-mid);
+    font-style: italic;
+    line-height: 2.2;
+    padding: 40px 48px;
+    border-left: 2px solid var(--gold);
+    background: rgba(160,120,32,0.04);
+    margin-top: 0;
+  }
+
+  /* ── S05: ABOUT ── */
+  #s05 { background: var(--navy); }
+  #s05 .section-label { color: var(--gold-light); }
+  #s05 .section-title { color: var(--cream); }
+  .s05-desc {
+    font-size: 14px; font-weight: 300;
+    color: rgba(249,247,242,0.75);
+    line-height: 2.2;
+    max-width: 680px;
+    margin-bottom: 56px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .feature-card {
+    background: rgba(249,247,242,0.04);
+    border: 1px solid rgba(249,247,242,0.08);
+    padding: 40px 32px;
+    transition: background 0.3s ease;
+  }
+  .feature-card:hover { background: rgba(249,247,242,0.07); }
+  .feature-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px; font-weight: 300;
+    color: rgba(160,120,32,0.25);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .feature-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .feature-text {
+    font-size: 13px; font-weight: 300;
+    color: rgba(249,247,242,0.65);
+    line-height: 1.9;
+  }
+
+  /* ── S06: CTA / FORM ── */
+  #s06 { background: var(--cream); }
+  .s06-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .s06-left-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .s06-left-desc {
+    font-size: 14px; font-weight: 300;
+    color: var(--text-mid);
+    line-height: 2.2;
+    margin-bottom: 40px;
+  }
+  .s06-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; font-weight: 300;
+    color: var(--text-light);
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+    padding: 20px 24px;
+    border: 1px solid var(--border-navy);
+    background: white;
+  }
+  .form-card {
+    background: var(--navy);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .form-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  }
+  .form-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .form-group { margin-bottom: 20px; }
+  .form-label {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; font-weight: 400;
+    color: rgba(249,247,242,0.6);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .form-req {
+    color: var(--gold);
+    margin-left: 4px;
+  }
+  .form-input, .form-textarea {
+    width: 100%;
+    background: rgba(249,247,242,0.06);
+    border: 1px solid rgba(249,247,242,0.15);
+    color: var(--cream);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px; font-weight: 300;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    -webkit-appearance: none;
+  }
+  .form-input:focus, .form-textarea:focus {
+    border-color: var(--gold);
+  }
+  .form-input::placeholder, .form-textarea::placeholder {
+    color: rgba(249,247,242,0.3);
+    font-size: 12px;
+  }
+  .form-textarea { min-height: 80px; resize: vertical; }
+  .form-checkbox-group {
+    display: flex; align-items: flex-start; gap: 12px;
+    margin-top: 8px;
+  }
+  .form-checkbox {
+    width: 16px; height: 16px;
+    border: 1px solid rgba(249,247,242,0.3);
+    background: transparent;
+    accent-color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+  }
+  .form-checkbox-label {
+    font-size: 12px; font-weight: 300;
+    color: rgba(249,247,242,0.6);
+    line-height: 1.6;
+    cursor: pointer;
+  }
+  .form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--navy);
+    border: none;
+    padding: 16px 32px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px; font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+  }
+  .form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(160,120,32,0.4);
+  }
+  .form-submit:disabled {
+    opacity: 0.5; cursor: not-allowed; transform: none;
+  }
+  .form-disclaimer {
+    font-size: 11px; font-weight: 300;
+    color: rgba(249,247,242,0.4);
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.7;
+  }
+
+  /* Form overlay */
+  #form-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(26,38,64,0.92);
+    z-index: 2000;
+    align-items: center; justify-content: center;
+  }
+  #form-overlay.active { display: flex; }
+  .overlay-card {
+    background: var(--cream);
+    padding: 64px 80px;
+    text-align: center;
+    max-width: 480px;
+  }
+  .overlay-icon {
+    width: 48px; height: 48px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 20px; color: var(--gold);
+  }
+  .overlay-title {
+    font-size: 20px; font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .overlay-text {
+    font-size: 13px; font-weight: 300;
+    color: var(--text-mid);
+    line-height: 2;
+  }
+  .overlay-close {
+    margin-top: 32px;
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; font-weight: 400;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 10px 24px;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+  }
+  .overlay-close:hover { background: var(--gold); color: var(--navy); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    padding: 40px 80px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(249,247,242,0.08);
+  }
+  .footer-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; font-weight: 400;
+    color: rgba(249,247,242,0.5);
+    letter-spacing: 0.1em;
+  }
+  .footer-right {
+    font-size: 11px; font-weight: 300;
+    color: rgba(249,247,242,0.4);
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 900px) {
+    #hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 120px 32px 64px; }
+    .hero-right { padding: 64px 32px; }
+    .section-inner { padding: 0 32px; }
+    .metrics-grid, .three-elements, .features-grid, .framework-cards { grid-template-columns: 1fr; }
+    .s06-grid { grid-template-columns: 1fr; }
+    nav { padding: 0 24px; }
+    .nav-title { display: none; }
+    .layer-card { grid-template-columns: 1fr; }
+    .layer-num { flex-direction: row; gap: 16px; border-right: none; border-bottom: 1px solid rgba(249,247,242,0.08); padding: 16px 24px; }
+    footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 24px; }
+    .s04-header { padding: 64px 32px; }
+    .s04-inner { padding: 0 32px; }
+    .sub-questions { grid-template-columns: 1fr; }
+    .fw-questions { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar"></div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-left">
+    <span class="nav-logo">Proudfoot Japan</span>
+    <div class="nav-divider"></div>
+    <span class="nav-title">日本ケミコン株式会社　経営構造診断レポート</span>
+  </div>
+  <a href="file:///C:/Users/USER/Downloads/index_6.html#s06" class="nav-cta">対話を申し込む</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-left">
+    <div class="hero-kicker fade-in visible">LIMITSHIFT 30 — 経営構造診断</div>
+    <div class="hero-company fade-in fade-in-delay-1 visible">日本ケミコン株式会社</div>
+    <h1 class="hero-h1 fade-in fade-in-delay-2 visible">世界シェアNo.1が、<br>なぜ<em>「席」</em>を持てないのか。</h1>
+    <p class="hero-sub fade-in fade-in-delay-3 visible">御社の中計・決算・技術資産・競合動向を精査する中で、外部から一つの問いが生まれました。それが的外れかどうかを、確かめるためにこのページを書きました。</p>
+    <div class="hero-meta fade-in fade-in-delay-4 visible">
+      対象企業：日本ケミコン株式会社（6997・東証プライム）<br>
+      診断基準日：2025年3月<br>
+      根拠資料：有価証券報告書、決算説明会資料、中期経営計画、OpenWork社員口コミ、NVIDIA技術ブログ他
+    </div>
+  </div>
+  <div class="hero-right">
+    <ul class="hero-toc fade-in visible">
+      <li>
+        <span class="toc-num">01</span>
+        <span class="toc-label">外部から見えた数値</span>
+      </li>
+      <li>
+        <span class="toc-num">02</span>
+        <span class="toc-label">構造の解析</span>
+      </li>
+      <li>
+        <span class="toc-num">03</span>
+        <span class="toc-label">「勝つ土俵」思考ツール</span>
+      </li>
+      <li>
+        <span class="toc-num">04</span>
+        <span class="toc-label">仮説と対話への招待</span>
+      </li>
+    </ul>
+    <a href="file:///C:/Users/USER/Downloads/index_6.html#s06" class="hero-cta-btn fade-in fade-in-delay-1 visible">「問いが的外れかどうかを、確かめたい」</a>
+    <p class="hero-cta-sub fade-in fade-in-delay-2 visible">「違います」という答えも、私たちにとっては大切な対話です。</p>
+  </div>
+</section>
+
+<!-- S01: METRICS -->
+<section id="s01">
+  <div class="section-inner">
+    <div class="section-label fade-in">01 — External Metrics</div>
+    <h2 class="section-title fade-in">外部から見えた数値と問い</h2>
+
+    <div class="metrics-grid">
+      <div class="metric-card featured fade-in">
+        <div class="metric-label">ROE</div>
+        <div class="metric-value">0.1%</div>
+        <div class="metric-desc">第10次中計目標15%に対する実績。9次・10次連続未達。</div>
+      </div>
+      <div class="metric-card fade-in fade-in-delay-1">
+        <div class="metric-label">営業利益率</div>
+        <div class="metric-value">3.0%</div>
+        <div class="metric-desc">競合ニチコン5〜6%、村田製作所15〜20%。世界No.1シェアの収益率ではない。</div>
+      </div>
+      <div class="metric-card fade-in fade-in-delay-2">
+        <div class="metric-label">有利子負債</div>
+        <div class="metric-value">748億</div>
+        <div class="metric-desc">D/Eレシオ2.12。カルテル訴訟後始末に累計500億円超を支出。FCFはマイナス102億円。</div>
+      </div>
+      <div class="metric-card kyber fade-in fade-in-delay-3">
+        <div class="metric-label">タイムライン</div>
+        <div class="metric-value">KYBER</div>
+        <div class="metric-desc">NVIDIAが800V HVDCアーキテクチャを本格展開する年。エコシステムパートナーリスト（Infineon・TI・ROHM・STMicro・Navitas・Delta・Vertiv等）に日本ケミコンの名はない。</div>
+        <div class="kyber-year">2027</div>
+      </div>
+    </div>
+
+    <div class="s01-lead fade-in">
+      公開されている数値を並べたとき、一つの問いが生まれました。「No.1なのに稼げない」構造は、何が原因なのか。そしてその構造は、2027年に向けてどう変化していくのか。
+    </div>
+  </div>
+</section>
+
+<!-- S02: STRUCTURE -->
+<section id="s02">
+  <div class="section-inner">
+    <div class="section-label fade-in">02 — Structural Analysis</div>
+    <h2 class="section-title fade-in">なぜ「席」がないのか——構造の解析</h2>
+
+    <div class="s02-lead fade-in">
+      技術はある。工場もある。しかし最も必要な「席」だけがない。AIサーバー向けハイブリッドコンデンサに数百億円を投じながら、そのアーキテクチャを決める議論に呼ばれていない会社がある。
+    </div>
+
+    <div class="layers-grid">
+      <div class="layer-card fade-in">
+        <div class="layer-num">
+          <div class="layer-num-big">01</div>
+          <div class="layer-num-label">Layer</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-title">ビジネスモデル</div>
+          <p class="layer-text">「引き合いを待つ受注型」が基本構造。NVIDIAが求めるのは「仕様書を渡す前の段階でアーキテクチャを決める議論への参加者」。</p>
+        </div>
+      </div>
+      <div class="layer-card fade-in fade-in-delay-1">
+        <div class="layer-num">
+          <div class="layer-num-big">02</div>
+          <div class="layer-num-label">Layer</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-title">人材</div>
+          <p class="layer-text">採用区分にFAE（フィールドアプリケーションエンジニア）が存在しない。「スペックをメインにしてアピール」（社員口コミ）という営業文化。</p>
+        </div>
+      </div>
+      <div class="layer-card fade-in fade-in-delay-2">
+        <div class="layer-num">
+          <div class="layer-num-big">03</div>
+          <div class="layer-num-label">Layer</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-title">財務</div>
+          <p class="layer-text">FCF▲102億円、D/Eレシオ2.12。先行投資（技術協力・認証・FAE人件費）の自己資金余力がない。</p>
+        </div>
+      </div>
+      <div class="layer-card fade-in fade-in-delay-3">
+        <div class="layer-num">
+          <div class="layer-num-big">04</div>
+          <div class="layer-num-label">Layer</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-title">組織文化</div>
+          <p class="layer-text">「縦も横も連携が取れていない」「年功序列・内向き最適化」（OpenWork口コミより）。境界を越えて外に打って出る組織文化が育っていない。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S03: FRAMEWORK -->
+<section id="s03">
+  <div class="section-inner">
+    <div class="section-label fade-in">03 — Thinking Framework</div>
+    <h2 class="section-title fade-in">「勝つ土俵」を定義する思考ツール</h2>
+
+    <div class="s03-lead fade-in">
+      多くのJTC（伝統的大企業）が、「強みを活かす戦略」を考える前に、「どの戦場で強みを使うか」の定義を誤る。私たちはBlock A〜Dの分析を経た後、必ずBlock Eとして「勝つ土俵の定義」に取り組む。そのツールをここで全て開示する。
+    </div>
+
+    <div class="framework-cards">
+      <div class="fw-card fade-in" onclick="toggleFwCard(this)">
+        <div class="fw-card-letter">A</div>
+        <div class="fw-card-title">Element A</div>
+        <div class="fw-card-heading">社会的必然<br>「必ず来るが、まだ未開拓な領域」</div>
+        <div class="fw-card-brief">判定基準：2つ以上該当するか</div>
+        <div class="fw-card-detail">
+          <strong style="color:var(--gold-light);">①物理的必然</strong><br>技術限界が強制する変化<br><br>
+          <strong style="color:var(--gold-light);">②政策的必然</strong><br>国家コミットメントに裏打ちされた変化<br><br>
+          <strong style="color:var(--gold-light);">③社会構造的必然</strong><br>不可逆な社会変化。後戻りできない方向性
+        </div>
+      </div>
+      <div class="fw-card fade-in fade-in-delay-1" onclick="toggleFwCard(this)">
+        <div class="fw-card-letter">B</div>
+        <div class="fw-card-title">Element B</div>
+        <div class="fw-card-heading">経営者の構造<br>「関心領域 × 決断できる条件」</div>
+        <div class="fw-card-brief">2階建てで確認する</div>
+        <div class="fw-card-detail">
+          <strong style="color:var(--gold-light);">B-1 経営者の言語</strong><br>戦略ワード・中計の記述から読む<br><br>
+          <strong style="color:var(--gold-light);">B-2 意思決定の条件</strong><br>初期投資・補助金・競合不在の時間軸・技術転用の有無
+        </div>
+      </div>
+      <div class="fw-card fade-in fade-in-delay-2" onclick="toggleFwCard(this)">
+        <div class="fw-card-letter">C</div>
+        <div class="fw-card-title">Element C</div>
+        <div class="fw-card-heading">技術/コンピテンシー<br>「転用可能な固有資産」</div>
+        <div class="fw-card-brief">固有性の確認</div>
+        <div class="fw-card-detail">
+          <strong style="color:var(--gold-light);">①競合に模倣困難か</strong><br>量産ノウハウを含むか<br><br>
+          <strong style="color:var(--gold-light);">②プロセスとして転用できるか</strong><br>製品を超えたレイヤーへの転用可能性
+        </div>
+      </div>
+    </div>
+
+    <div class="fw-arrow fade-in">3要素が重なる領域</div>
+    <div class="fw-output-box fade-in">
+      <div class="fw-output-label">大きな土俵の定義</div>
+      <div class="fw-output-text">A × B × C が重なる領域を一文で言語化する。<br>↓　さらに絞り込む：競合密度が分岐する × 技術の優位性が明確になる</div>
+    </div>
+    <div class="fw-arrow fade-in">アウトプット</div>
+    <div class="fw-output-box fade-in" style="margin-bottom: 48px; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);">
+      <div class="fw-output-label">「勝てるサブ領域」の定義</div>
+      <div class="fw-output-text" style="font-size:16px;">競合空白 × 技術接点 × 必然性<br><span style="font-family:&#39;DM Mono&#39;,monospace; font-size:12px; color:rgba(249,247,242,0.5);">この3条件が同時に成立する領域のみが「勝てる土俵」となる</span></div>
+    </div>
+
+    <div class="fw-questions">
+      <div class="fw-q fade-in">
+        <div class="fw-q-num">Q1</div>
+        <div class="fw-q-text">今、競合は何をしているか<br><span style="color:var(--text-light); font-size:11px;">競合密度と先行優位の確認</span></div>
+      </div>
+      <div class="fw-q fade-in fade-in-delay-1">
+        <div class="fw-q-num">Q2</div>
+        <div class="fw-q-text">いつウィンドウが閉じるか<br><span style="color:var(--text-light); font-size:11px;">参入可能な時間軸の特定</span></div>
+      </div>
+      <div class="fw-q fade-in fade-in-delay-2">
+        <div class="fw-q-num">Q3</div>
+        <div class="fw-q-text">初動に何が必要か<br><span style="color:var(--text-light); font-size:11px;">最初の一手と最小投資の確認</span></div>
+      </div>
+      <div class="fw-q fade-in fade-in-delay-3">
+        <div class="fw-q-num">Q4</div>
+        <div class="fw-q-text">勝ちパターンは何か<br><span style="color:var(--text-light); font-size:11px;">技術→製品→市場の連鎖構造</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S04: HYPOTHESIS -->
+<section id="s04">
+  <div class="s04-header fade-in">
+    <div class="s04-header-inner">
+      <div class="section-label" style="color:var(--gold-light);">04 — Hypothesis</div>
+      <h2 class="section-title" style="color:var(--cream);">仮説：日本ケミコンの「勝てる土俵」</h2>
+      <div class="s04-tagline">これが私たちの仮説だ。全て開示する。</div>
+    </div>
+  </div>
+
+  <div class="s04-inner">
+
+    <div class="step-block">
+      <div class="step-label fade-in">STEP 01 — 大きな土俵の定義</div>
+      <div class="hypothesis-box fade-in">
+        <div class="hypothesis-text">「コンデンサを作る会社」から<br>「電気化学界面の構造を設計する会社」へ。<br>電気化学エネルギー変換デバイスの、量産可能な多孔質界面構造体サプライヤーになる。</div>
+        <div class="hypothesis-reason">なぜこの土俵か：コンデンサの仕事と水電解槽の仕事は表面上まったく異なるが、物理の本質は同じだ。どちらも「電極の表面積を最大化し、そこで起きる電気化学反応を制御する」問題を解いている。日本ケミコンの電極箔エッチング技術はそのまま「電気化学界面の精密構造制御技術」として機能する。</div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-label fade-in">STEP 02 — 3要素のあてはめ</div>
+
+      <div class="three-elements">
+        <div class="elem-card fade-in">
+          <div class="elem-header">
+            <div class="elem-check">✓</div>
+            <div class="elem-header-label">A：社会的必然</div>
+          </div>
+          <div class="elem-body">
+            <div class="elem-title">2つ以上該当</div>
+            <div class="elem-content">
+              <strong>②政策的必然：</strong>2050年カーボンニュートラル。2024年、水電解装置への世界設備投資額が50億ドル到達。日本政府の蓄電池・水素産業戦略に明記。<br><br>
+              <strong>①物理的必然：</strong>グリーン水素製造コストの最大ボトルネックが電極界面の効率と耐久性にあることは技術的に確定している。
+            </div>
+          </div>
+        </div>
+        <div class="elem-card fade-in fade-in-delay-1">
+          <div class="elem-header">
+            <div class="elem-check">✓</div>
+            <div class="elem-header-label">B：経営者の構造</div>
+          </div>
+          <div class="elem-body">
+            <div class="elem-title">2階建てで確認済み</div>
+            <div class="elem-content">
+              <strong>B-1 経営者の言語：</strong>上山典男社長（2025年1月インタビュー）：「温暖化が進む中での新エネルギー市場への対応」を次期中計（2026年度〜）の3本柱の一つとして明言。<br><br>
+              <strong>B-2 決断できる条件：</strong>既存のエッチング設備・量産ラインを転用できる→新工場不要、初期投資が相対的に小さい。GteX事業、蓄電池産業戦略への補助金申請余地あり。
+            </div>
+          </div>
+        </div>
+        <div class="elem-card fade-in fade-in-delay-2">
+          <div class="elem-header">
+            <div class="elem-check">✓</div>
+            <div class="elem-header-label">C：技術の固有性</div>
+          </div>
+          <div class="elem-body">
+            <div class="elem-title">模倣困難な固有資産</div>
+            <div class="elem-content">
+              <strong>電極箔エッチング技術：</strong>表面積を数十〜数百倍に拡大するナノ構造制御。陽極酸化電圧5V〜700Vの全レンジ精密制御。92年間内製・設備も自社設計。<br><br>
+              <strong>製品を超えたプロセス転用：</strong>「コンデンサ電極箔」→「水電解電極基材」は同じアルミ多孔質構造の別用途展開。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="step-label fade-in">STEP 03 — 勝てるサブ領域の特定</div>
+
+      <div class="sub-domain-box fade-in">
+        <div class="sub-label">勝てるサブ領域</div>
+        <div class="sub-title">AEM型水電解の電極基材<br>（多孔質アルミ系集電体）</div>
+        <div class="sub-content">
+          なぜAEM型か：PEMはイリジウムなど高価・希少金属が触媒に必須。AEMはニッケルなど安価・汎用金属でよく、耐久性課題から開発メーカーが少なく電極基材の量産技術を確立したプレイヤーが存在しない。<br><br>
+          競合密度：国内に量産確立プレイヤーなし。海外もMott Corporation（米）等ごく少数。アルカリ系AEM環境ではアルミ箔の陽極酸化皮膜（アルミナ）が適した耐食性を持つため、アルミ系での代替が大幅コストダウンになる。
+        </div>
+        <div class="sub-questions">
+          <div class="sub-q">
+            <div class="sub-q-label">Q1</div>
+            <div class="sub-q-text">国内競合不在</div>
+          </div>
+          <div class="sub-q">
+            <div class="sub-q-label">Q2</div>
+            <div class="sub-q-text">2027〜2030年が参入ウィンドウ</div>
+          </div>
+          <div class="sub-q">
+            <div class="sub-q-label">Q3</div>
+            <div class="sub-q-text">既存設備転用による電解試験サンプル製造＋GteX研究PJとの共同実験</div>
+          </div>
+          <div class="sub-q">
+            <div class="sub-q-label">Q4</div>
+            <div class="sub-q-text">電極基材量産→AEM装置メーカーへ素材供給→全固体電池・CO₂還元への水平展開</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="s04-closing fade-in">
+      これが私たちの仮説だ。的外れかもしれない。御社の内側からしか見えないことの方が、はるかに多いはずだ。だからこそ、確かめたい。「この仮説のどこが間違っているか」を、御社の経営企画の方に教えていただくことが、私たちが申し込む対話の目的だ。
+    </div>
+
+  </div>
+</section>
+
+<!-- S05: ABOUT -->
+<section id="s05">
+  <div class="section-inner">
+    <div class="section-label fade-in">05 — About LimitShift 30</div>
+    <h2 class="section-title fade-in">LimitShift 30 とは</h2>
+    <p class="s05-desc fade-in">LimitShift 30は、Proudfoot Japanが提供するイノベーション停滞診断サービスです。日本の上場企業が陥る「No.1なのに稼げない」構造、「席がない」構造、「次の土俵が見えない」構造を、独自のフレームワーク（Block A〜E）と対話を通じて解析します。最終アウトプットは戦略レポートではなく、経営者が「動ける問い」と「勝てる土俵の定義」を持つことです。</p>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-num">①</div>
+        <div class="feature-title">仮説ファースト</div>
+        <div class="feature-text">面談前にBlock A〜Eの分析を完了しています。このLPがその証明です。</div>
+      </div>
+      <div class="feature-card fade-in fade-in-delay-1">
+        <div class="feature-num">②</div>
+        <div class="feature-title">問いによる対話</div>
+        <div class="feature-text">報告書ではなく、経営者自身が思考を動かす問いを設計します。</div>
+      </div>
+      <div class="feature-card fade-in fade-in-delay-2">
+        <div class="feature-num">③</div>
+        <div class="feature-title">土俵の再定義まで</div>
+        <div class="feature-text">痛点解析で終わらず「どの土俵で・いつ・何から動くか」をBlock Eで具体的に提案します。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S06: CTA / FORM -->
+<section id="s06">
+  <div class="section-inner">
+    <div class="section-label fade-in">06 — Dialogue</div>
+
+    <div class="s06-grid">
+      <div>
+        <h2 class="s06-left-title fade-in">「問いが的外れかどうかを、<br>教えてください」</h2>
+        <p class="s06-left-desc fade-in fade-in-delay-1">このページに書いたことは、外部公開情報だけから見えたものです。内側からしか見えないことの方が、はるかに多いはずです。「的外れです」という答えも、私たちにとっては大切な対話です。</p>
+        <div class="s06-note fade-in fade-in-delay-2">
+          売り込みではありません。<br>
+          私たちの仮説が的外れなら、そう言っていただければ十分です。
+        </div>
+      </div>
+
+      <div class="form-card fade-in fade-in-delay-1">
+        <div class="form-title">30分の対話を申し込む</div>
+        <form id="contact-form" action="https://formspree.io/f/mjgalvdz" method="POST">
+          <div class="form-group">
+            <label class="form-label">お名前<span class="form-req">*</span></label>
+            <input type="text" name="name" class="form-input" placeholder="山田 太郎" required="">
+          </div>
+          <div class="form-group">
+            <label class="form-label">会社名<span class="form-req">*</span></label>
+            <input type="text" name="company" class="form-input" placeholder="日本ケミコン株式会社" required="">
+          </div>
+          <div class="form-group">
+            <label class="form-label">役職</label>
+            <input type="text" name="title" class="form-input" placeholder="経営企画部長">
+          </div>
+          <div class="form-group">
+            <label class="form-label">メールアドレス<span class="form-req">*</span></label>
+            <input type="email" name="email" class="form-input" placeholder="taro.yamada@nipponchemi-con.co.jp" required="">
+          </div>
+          <div class="form-group">
+            <label class="form-label">候補日①<span class="form-req">*</span></label>
+            <input type="text" name="date1" class="form-input" placeholder="例：5月15日（水）午後" required="">
+          </div>
+          <div class="form-group">
+            <label class="form-label">候補日②</label>
+            <input type="text" name="date2" class="form-input" placeholder="例：5月20日（月）午前">
+          </div>
+          <div class="form-group">
+            <label class="form-label">候補日③</label>
+            <input type="text" name="date3" class="form-input" placeholder="例：5月22日（水）終日">
+          </div>
+          <div class="form-group">
+            <div class="form-checkbox-group">
+              <input type="checkbox" id="email-adjust" name="email_adjust" class="form-checkbox">
+              <label for="email-adjust" class="form-checkbox-label">メールで日程調整を希望する</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">事前コメント（任意）</label>
+            <textarea name="comment" class="form-textarea" placeholder="仮説への感想や、特に確認したい点があればご記入ください"></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submit-btn">対話を申し込む</button>
+          <p class="form-disclaimer">売り込みではありません。私たちの仮説が的外れなら、そう言っていただければ十分です。</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">Proudfoot Japan — LIMITSHIFT 30</div>
+  <div class="footer-right">本ページは日本ケミコン株式会社　経営企画担当役員様専用の資料です</div>
+</footer>
+
+<!-- OVERLAY -->
+<div id="form-overlay">
+  <div class="overlay-card">
+    <div class="overlay-icon">✓</div>
+    <div class="overlay-title">対話のお申し込みを<br>受け付けました</div>
+    <div class="overlay-text">2営業日以内にご連絡いたします。<br>ご多忙の中、お時間をいただきありがとうございます。</div>
+    <div class="overlay-close" onclick="document.getElementById(&#39;form-overlay&#39;).classList.remove(&#39;active&#39;)">閉じる</div>
+  </div>
+</div>
+
+<script>
+  // Progress bar
+  window.addEventListener('scroll', () => {
+    const winHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (window.scrollY / winHeight) * 100;
+    document.getElementById('progress-bar').style.width = progress + '%';
+
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Hero section visible on load
+  setTimeout(() => {
+    document.querySelectorAll('#hero .fade-in').forEach(el => el.classList.add('visible'));
+  }, 200);
+
+  // Framework card toggle
+  function toggleFwCard(card) {
+    const wasActive = card.classList.contains('active');
+    document.querySelectorAll('.fw-card').forEach(c => c.classList.remove('active'));
+    if (!wasActive) card.classList.add('active');
+  }
+
+  // Form submission
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = '送信中...';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('form-overlay').classList.add('active');
+        form.reset();
+      } else {
+        alert('送信に失敗しました。お手数ですが、直接メールにてご連絡ください。');
+      }
+    } catch {
+      alert('送信に失敗しました。ネットワーク接続をご確認ください。');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '対話を申し込む';
+    }
+  });
+</script>
+
+
+</body></html>
